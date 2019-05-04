@@ -1,0 +1,12 @@
+.region{
+-fx-padding:50px;
+-fx-background-color:linear-gradient(to bottom right, #00B5B5, #0081AA); /*degrade diagonale*/
+}
+.button
+{
+-fx-text-fill:white;/* couleur du texte */
+-fx-font-weight: bold;
+-fx-padding:50px; /* agrandi la taille de l'objet.. ici le bouton */
+-fx-background-radius: 50; /*boutton rond*/
+-fx-background-color:#00B5B5;
+}

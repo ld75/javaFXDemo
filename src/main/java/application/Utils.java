@@ -76,8 +76,8 @@ public class Utils
         dialogEmbeded.setContent(new ScrollPane(new TextArea(Utils.printStacktrace(e1))));
         dialog.setDialogPane(dialogEmbeded);
         dialog.getDialogPane().getButtonTypes().addAll(ButtonType.CLOSE);
-        dialog.setWidth(100);
-        dialog.setHeight(100);
+        dialog.setWidth(900);
+        dialog.setHeight(900);
         dialog.show();
     }
     public static void openMessageDialog(String msg) throws UnsupportedEncodingException

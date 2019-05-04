@@ -23,8 +23,13 @@ public class WelcomePresentor extends APresentor
     public Node convertJavaObjectToNode(Object graphNode) throws Exception
     {
         final BorderPane welcomePane = new BorderPane();
-        Button welcome = new Button("welcome");
-        welcome.setOnAction(c->{
+        welcomePane.getStyleClass().add("region");
+        final String path = WelcomePresentor.class.getClassLoader().getResource("demo.css").toExternalForm();
+        welcomePane.getStylesheets().add(path);
+        Button welcomeButton = new Button("welcome");
+        welcomeButton.getStyleClass().add("button");
+        welcomeButton.getStylesheets().add(path);
+        welcomeButton.setOnAction(c->{
             try
             {
                 openMessageDialog("aaaaaaa");
@@ -40,7 +45,7 @@ public class WelcomePresentor extends APresentor
             primaryStage.setScene(scene) ;
             primaryStage.show() ;*/
         });
-        welcomePane.setCenter(welcome);
+        welcomePane.setCenter(welcomeButton);
         return welcomePane;
     }
 }
